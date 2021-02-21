@@ -17,10 +17,10 @@ function getCours(){
         if(this.status == 200){  /* Le service a bien répondu */
             // Convertir le retour JSON
            var json=JSON.parse(this.response);
-        //   var eur = formatMontant(json.EUR);
            var dt = new Date();
-        //   document.getElementById("cours").innerHTML=eur + " $euro;";
            document.querySelector("div#horo").innerHTML="Maj " + dt.toLocaleString();
+           var eur = formatMontant(json.EUR);
+           document.getElementById("cours").innerHTML=eur + " $euro;";
         }
     }
     /* Récupérer l'API*/
