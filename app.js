@@ -19,7 +19,12 @@ function getCours(){
            var json=JSON.parse(this.response);
            var dt = new Date();
            document.querySelector("div#horo").innerHTML="Maj " + dt.toLocaleString();
-           var eur = formatMontant(json.EUR);
+           var eur = new Intl.NumberFormat('it-IT', {
+               style: 'currency',
+               currency: 'EUR',
+               minimumFractionDigits: 2
+           });
+           eur.format(json.EUR);
            document.getElementById("cours").innerHTML=eur + " $euro;";
         }
     }
