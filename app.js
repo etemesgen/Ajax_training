@@ -25,7 +25,7 @@ function getCours(){
                minimumFractionDigits: 2
            });
            eur.format(json.EUR);
-           document.getElementById("cours").innerHTML=eur + " $euro;";
+           document.getElementById("cours").innerHTML=eur + " &euro;";
         }
     }
     /* Récupérer l'API*/
